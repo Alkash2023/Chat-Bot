@@ -5,5 +5,4 @@ def pass_chek(password):
     else:
         if '!' in password or  '=' in password or '@' in password or  '#' in password or  '№' in password:
             print("пароль надежный")
-    else:print("пароль ненадежный")
-pass_chek(password) 
+   pass_chek(password) 

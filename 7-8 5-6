@@ -1,0 +1,13 @@
+import random as r
+al="QWERTYUIOP{}:L><KMJNHBGVFCDXSAZzxcvbnm,;'][plkoijhuygftrdesawq!@#$%^&*()1234658790{}[]"
+
+n=r.randint(5,20)
+
+while 1:
+    password=""
+    for i in range(n):
+        password+=al[r.randint(0,len(al)-1)]
+    if password.isalpha() or password.isdigit() or password.islower() or password.isupper() or len(password)<8:
+        print("подбор пароля")
+    else:break
+print(password)

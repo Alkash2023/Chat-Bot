@@ -1,0 +1,9 @@
+import random 
+import string 
+def passs(length):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for i in range(length))
+    return password
+pas= int(input("Введите желаемую длину пароля: "))
+passw = passs(pas)
+print("Ваш будующий пароль:", passw)

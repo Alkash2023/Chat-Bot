@@ -1,0 +1,17 @@
+import pyautogui
+import time
+time.sleep(1)
+pyautogui.moveTo(1250,10)
+pyautogui.click(button = "left")
+time.sleep(1)
+pyautogui.moveTo(1320,10)
+pyautogui.click(button = "right")
+time.sleep(1)
+pyautogui.moveTo(1320,350)
+pyautogui.click(button = "left")
+time.sleep(1)
+pyautogui.write('I don,t robot', interval=0.50)
+time.sleep(1)
+pyautogui.press('enter')
+
+

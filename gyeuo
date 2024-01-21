@@ -1,0 +1,11 @@
+a=int(input("введите меньшее число "))
+b=int(input("введите большее число "))
+def coems(a,b):
+    if  a<b :
+         for i in range(a,b+1):
+            print(i)
+    else:        
+         for r in range(a,b-1,-1):
+            print(r)
+coems(a,b)
+

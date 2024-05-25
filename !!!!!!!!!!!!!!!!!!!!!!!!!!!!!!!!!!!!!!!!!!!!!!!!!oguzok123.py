@@ -30,7 +30,7 @@ async def cmd_start(message: types.Message):
         resize_keyboard=True,
         input_field_placeholder="Меню:"
         )
-    await message.answer("Привет ",reply_markup=keyboard)
+    await message.answer("Привет я бот к которому обращаются когда скучно",reply_markup=keyboard)
 
 @dp.message(F.text.lower() == "/dice")
 async def cmd_9(message: types.Message):
@@ -64,4 +64,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-

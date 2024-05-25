@@ -12,6 +12,17 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token="6838967112:AAF3dfhP9UjMyCnB_Ct1rhQ-nF9oGHk0v7o")
 # Диспетчер
 dp = Dispatcher()
+@dp.message(Command("help"))
+async def cmd_123(message: types.Message):
+    k='''Этот бот может,
+        1./dice - Играть в кубик
+        2./bowl - Играть в боулинг
+        3./dart - Играть в дартс
+        4./novostiNSk - Показать новости Новосибирска
+        5./sovetfilm - Показать лучшие советские фильмы
+        6./topfilm- Показать Новые фильмы
+        7./freemoney - Дать денег'''
+    await message.answer(k)
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
     kb = [
@@ -30,7 +41,7 @@ async def cmd_start(message: types.Message):
         resize_keyboard=True,
         input_field_placeholder="Меню:"
         )
-    await message.answer("Привет я бот к которому обращаются когда скучно",reply_markup=keyboard)
+    await message.answer("Привет я бот к которому обращаются когда скучно введи /help и узнай что я умею",reply_markup=keyboard)
 
 @dp.message(F.text.lower() == "/dice")
 async def cmd_9(message: types.Message):
